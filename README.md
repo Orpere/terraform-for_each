@@ -6,7 +6,7 @@ This repo has as dependencies a command line or shell git and terraform.You can 
 
 ## How can I use this repo`?`
 
-### 1 - clone repoterraform-for_each
+### 1 - clone repo terraform-for_each
 
 - open your shell or command line and go to the directory where you pretend to add the repo
 
