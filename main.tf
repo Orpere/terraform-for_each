@@ -1,16 +1,11 @@
-resource "null_resource" "city" {
-  for_each = "${var.city}"
-}
-
 variable "city" {
-  type = "map"
-  default = {
-    ny  = "new york"
-    ln  = "london"
-    sjc = "sanjose"
-  }
+  default = ["new_york", "london"]
 }
 
-output "city" {
-  value = "${null_resource.city}"
+resource "null_resource" "city" {
+  for_each = toset(var.city)
 }
+
+# output "upper_names" {
+#   value = [for name in var.city : upper(name)]
+# }
